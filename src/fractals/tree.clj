@@ -24,8 +24,9 @@
   (q/translate (/ (q/width) 2) (q/height))
   (branch 150 20 (* 30 (/ Math/PI 180))))
 
-(q/defsketch tree
-  :title "Tree"
-  :size [600 600]
-  :draw draw
-  :middleware [qm/fun-mode])
+(defn run []
+  (q/defsketch tree
+    :title "Tree"
+    :size [600 600]
+    :draw draw
+    :middleware [qm/fun-mode]))

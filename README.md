@@ -1,18 +1,41 @@
 # fractals
 
-Fractal explorations with Quil
+Fractal explorations with Quil.
+
+## Setup
+
+Ensure you have a new enough JDK installed.
+
+Install [Leiningen](https://leiningen.org).
 
 ## Usage
 
-LightTable - open `core.clj` and press `Ctrl+Shift+Enter` to evaluate the file.
+Run any of the sketches with:
 
-Emacs - run cider, open `core.clj` and press `C-c C-k` to evaluate the file.
+```bash
+lein run <sketch>
+```
 
-REPL - run `(require 'fractals.core)`.
+For example:
+
+```bash
+lein run sierpinski
+```
+
+Show available sketches with:
+
+```bash
+lein run
+```
+
+Available sketches:
+
+- `cantor`
+- `koch`
+- `l-systems`
+- `sierpinski`
+- `tree`
 
 ## License
 
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+[CC0](https://creativecommons.org/publicdomain/zero/1.0), public domain.

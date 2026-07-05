@@ -32,10 +32,11 @@
     (doseq [[v1 v2] lines]
       (q/line (.x v1) (.y v1) (.x v2) (.y v2)))))
 
-(q/defsketch koch-curve
-  :title "Koch Curve"
-  :size [1000 400]
-  :setup setup
-  :update (partial mapcat koch)
-  :draw draw
-  :middleware [qm/fun-mode])
+(defn run []
+  (q/defsketch koch-curve
+    :title "Koch Curve"
+    :size [1000 400]
+    :setup setup
+    :update (partial mapcat koch)
+    :draw draw
+    :middleware [qm/fun-mode]))

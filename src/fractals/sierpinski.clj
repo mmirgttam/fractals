@@ -29,10 +29,11 @@
       (q/fill 0)
       (q/triangle (.x v1) (.y v1) (.x v2) (.y v2) (.x v3) (.y v3)))))
 
-(q/defsketch sierpinski-triangle 
-  :title "Sierpinski Triangle"
-  :size [600 600]
-  :setup setup
-  :update (partial mapcat sierpinski)
-  :draw draw
-  :middleware [qm/fun-mode])
+(defn run []
+  (q/defsketch sierpinski-triangle
+    :title "Sierpinski Triangle"
+    :size [600 600]
+    :setup setup
+    :update (partial mapcat sierpinski)
+    :draw draw
+    :middleware [qm/fun-mode]))

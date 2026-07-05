@@ -19,10 +19,11 @@
   (doseq [{:keys [x y len]} lines]
     (q/rect x y len 20)))
 
-(q/defsketch cantor-set
-  :title "Cantor Set"
-  :size [1000 500]
-  :setup setup
-  :update (partial mapcat cantor)
-  :draw draw
-  :middleware [qm/fun-mode])
+(defn run []
+  (q/defsketch cantor-set
+    :title "Cantor Set"
+    :size [1000 500]
+    :setup setup
+    :update (partial mapcat cantor)
+    :draw draw
+    :middleware [qm/fun-mode]))
